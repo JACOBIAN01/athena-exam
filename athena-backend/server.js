@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = 6001;
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +15,6 @@ const sessionsPath = path.join(__dirname, "data", "sessions.json");
 function readQuestions() {
   return JSON.parse(fs.readFileSync(questionsPath, "utf-8"));
 }
-
 
 function readSessions() {
   return JSON.parse(fs.readFileSync(sessionsPath, "utf-8"));
